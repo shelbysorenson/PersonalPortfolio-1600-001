@@ -1,7 +1,18 @@
+:root {
+    --gray: #595656;
+    --light-gray: #A6A19F;
+    --beige: #F2E8DC;
+    --light-green: #9AA641;
+    --light-blue: #B3CFF2;
+    --dark-green: #131E08;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +24,7 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    background-color: cornflowerblue;
+    background-color: var(--gray)
 }
 
 .navlist {
@@ -25,10 +36,12 @@ font-family: 'Poppins', sans-serif;
     display: block;
     font-size: x-large;
     padding: .75em .5em;
+    color: #fff;
 }
 
 .navlist a:hover {
-    background-color: darkgreen;
+    background-color: var(--light-gray);
+    color: #333;
 }
 
 #welcome-section {
@@ -36,7 +49,7 @@ font-family: 'Poppins', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(22, 10, 85);
+    background-color: var(--dark-green);
     color: #fff;
     width: 100%;
     height: 100vh;
@@ -46,6 +59,9 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--beige);
+    height: 600px;
 }
 
 .project-tile {
@@ -57,7 +73,38 @@ font-family: 'Poppins', sans-serif;
 }
 
 figcaption {
-    text-align: center;
+   text-align: center;
+}
+
+figcaption > span {
+    font-size: 1.25em;
+}
+
+#contact {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--light-green);
+   height: 300px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-links a {
+    margin: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--gray);
+    height: 70px;
+    color: #fff;
 }
 
 a {
