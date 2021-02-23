@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    z-index: 9999;
     background-color: var(--dark-brown);
 }
 
@@ -67,11 +68,16 @@ body {
 }
 
 .project-tile:hover {
-    color:#aaa;
+    color:#F29C50;
 }
 
 figcaption {
+   position: relative;
+   top: -7px;
    text-align: center;
+   background-color: var(--dark-brown);
+   font-weight: 900;
+   color: var(--beige);
 }
 
 figcaption > span {
@@ -94,6 +100,7 @@ figcaption > span {
 
 .contact-links a {
     margin: 1em;
+    color: var(--beige);
 }
 
 footer {
@@ -102,7 +109,7 @@ footer {
     align-items: center;
     background-color: var(--dark-brown);
     height: 70px;
-    color: #fff;
+    color: var(--beige);
 }
 
 a {
