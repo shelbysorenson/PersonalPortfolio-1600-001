@@ -1,12 +1,10 @@
 :root {
-    --gray: #595656;
-    --light-gray: #A6A19F;
+    --dark-brown: #332213;
+    --light-orange: #F29C50;
     --beige: #F2E8DC;
-    --light-green: #9AA641;
-    --light-blue: #B3CFF2;
-    --dark-green: #131E08;
+    --light-brown: #B28D61;
+    --brown: #73462C;
 }
-
 
 * {
     margin: 0;
@@ -16,7 +14,7 @@
 }
 
 body {
-font-family: 'Poppins', sans-serif;   
+  font-family: 'Poppins', sans-serif;   
 }
 
 #navbar {
@@ -24,7 +22,7 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    background-color: var(--gray)
+    background-color: var(--dark-brown);
 }
 
 .navlist {
@@ -34,13 +32,13 @@ font-family: 'Poppins', sans-serif;
 
 .navlist a {
     display: block;
-    font-size: x-large;
+    font-size: 1.5em;
     padding: .75em .5em;
     color: #fff;
 }
 
 .navlist a:hover {
-    background-color: var(--light-gray);
+    background-color: var(--light-orange);
     color: #333;
 }
 
@@ -49,7 +47,7 @@ font-family: 'Poppins', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark-green);
+    background-color: var(--brown);
     color: #fff;
     width: 100%;
     height: 100vh;
@@ -85,7 +83,7 @@ figcaption > span {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: var(--light-green);
+   background-color: var(--light-brown);
    height: 300px;
 }
 
@@ -102,7 +100,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--gray);
+    background-color: var(--dark-brown);
     height: 70px;
     color: #fff;
 }
