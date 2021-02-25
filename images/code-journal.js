@@ -32,5 +32,26 @@ let myBool = true
 // Array
 
 let myArray = [] // this is an empty array
-
+//              0     1       2       3      4
 let myArray2 = [42, 'Bob', myBool, ANSWER, true]
+
+letsecondElement = myArray2[1]
+
+myArray2.push('Shelby') // added an element to the end of myArray2
+
+myArray2.unshift('Hello World!')
+
+let mylongString = '24782hfhghdg894htdgkjadfkdjbgih84983hgrgjkbfdkjfdk' // just an array of characters
+
+mylongString.length
+
+// Object
+
+let minObject = {}
+
+const myCar = {
+    make: 'Chevrolet',
+    color: 'Red',
+    year: '1965',
+    vin: '2897463940'
+}:
