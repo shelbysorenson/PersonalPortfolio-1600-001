@@ -8,3 +8,7 @@ let filmTwo = document.querySelector('#film2')
 
 filmOne.textContent = films[2].title
 filmTwo.textContent = films[1].title
+
+for (var i = 0; < films.length; i++) {
+    console.log(films[i]);
+}
