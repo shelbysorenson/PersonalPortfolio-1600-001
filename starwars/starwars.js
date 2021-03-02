@@ -1,4 +1,4 @@
-import { films } from '../films.js'
+import { films } from './data/films.js'
 
 
 console.log(films[6])
@@ -9,6 +9,6 @@ let filmTwo = document.querySelector('#film2')
 filmOne.textContent = films[2].title
 filmTwo.textContent = films[1].title
 
-for (var i = 0; < films.length; i++) {
+for (var i = 0; i< films.length; i++) {
     console.log(films[i]);
 }

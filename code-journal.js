@@ -54,4 +54,4 @@ const myCar = {
     color: 'Red',
     year: '1965',
     vin: '2897463940'
-}:
+}
