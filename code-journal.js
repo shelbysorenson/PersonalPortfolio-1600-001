@@ -12,7 +12,7 @@ const ANSWER = 42 // const is declared and initialized with the value 42
 
 let string1 = 'Hello World!' // read '=' as 'is assigned the value of ...'
 
-let string2 = "Hellow Utah!"
+let string2 = "Hello Utah!"
 
 let string3 = new String('Hello World!')
 
@@ -50,8 +50,39 @@ mylongString.length
 let minObject = {}
 
 const myCar = {
-    make: 'Chevrolet',
-    color: 'Red',
-    year: '1965',
-    vin: '2897463940'
+    make: "Chevrolet",
+    color: "Red",
+    year: "1965",
+    vin: "28974639eijkldjshs40"
+};
+
+myCar.numDoors = 2;
+
+const anotherObject = {
+    wordz: ("too", "bar", "baz"),
+    car: {
+        make: "McLaren",
+        model: "675Lt"
+    },
+    awesomeness: true
+};
+
+// Functions
+
+function myFunction() {
+    return "My greeting to you...";
+}
+
+function sumTwoThings(one, two) {
+    // watch out for data type issues here
+    return one + two; // if numbers will add them If strings will concatenate.
+}
+
+// Arrow Functions
+
+// a higher order function is a function that accepts another function as a parameter.
+// filter, map and reduce are the most popular, but forEach, every and some are also HOFs
+
+const theFunction = () => { //multiple lines use curly braces and 'return' keyword
+return 'I am awesome'
 }

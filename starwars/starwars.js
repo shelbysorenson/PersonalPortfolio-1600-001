@@ -1,14 +1,18 @@
 import { films } from './data/films.js'
 
 
-console.log(films[6])
+let filmList = document.querySelector('#filmList')
 
-let filmOne = document.querySelector('#film1')
-let filmTwo = document.querySelector('#film2')
 
-filmOne.textContent = films[2].title
-filmTwo.textContent = films[1].title
+for (let i = 0; i < films.length; i++) {
+    
+    const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
+    let filmItem = document.createElement('li')
+    filmItem.textContent = foundFilm.title
+    filmList.appendChild(filmItem)
+}
 
-for (var i = 0; i< films.length; i++) {
-    console.log(films[i]);
+function getLastNumber(url) {
+    let end = url.lastIndexOf('/')
+    return url.charAt(end - 1)
 }
