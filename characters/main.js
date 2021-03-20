@@ -23,7 +23,7 @@ mainHeader.appendChild(othersButton)
 othersButton.addEventListener('click', () => populateDOM(otherCharacters))
 
 const maleCharacters = people.filter(person => person.gender === 'male')
-const femaleCharaters = people.filter(person => person.gender === 'female')
+const femaleCharacters = people.filter(person => person.gender === 'female')
 const otherCharacters = people.filter(person => {
     if (person.gender === 'n/a' || 
         person.gender === 'hermaphrodite') {
