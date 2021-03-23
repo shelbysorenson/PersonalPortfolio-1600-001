@@ -32,6 +32,12 @@ function populateShipView(shipData) {
     shipView.appendChild(shipImage)
 }
 
+function addStarField(element, numStars) {
+    element.style.setProperty('background-color', '#000')
+}
+
+addStarField(document.querySelector('body'), 1000)
+
 populateNav(starships)
 
 populateShipView()
