@@ -3,10 +3,24 @@
     box-sizing: border-box;
 }
 
-
-
 main {
     display: flex;
+    /* height: 100vh; */
+}
+
+.shipView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 200px;
+}
+
+img, nav {
+    position: relative;
+    z-index: 1;
 }
 
 a {
