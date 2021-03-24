@@ -37,7 +37,7 @@ function addStarField(element, numStars) {
     for (let i = 0; i < numStars; i++) {
         let star = document.createElement('div')
         star.style.setProperty('position', 'absolute')
-        star.style.setPropertyValue('width', '2px')
+        star.style.setProperty('width', '2px')
         star.style.setProperty('height', '2px')
         star.style.setProperty('background-color', 'white')
         let xy = getRandomPosition()
