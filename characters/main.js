@@ -22,13 +22,19 @@ othersButton.textContent = 'Other Characters'
 mainHeader.appendChild(othersButton)
 othersButton.addEventListener('click', () => populateDOM(otherCharacters))
 
+const noneButton = document.createElement('button')
+noneButton.textContent = 'None Characters'
+mainHeader.appendChild(noneButton)
+noneButton.addEventListener('click', () => populateDOM(noneCharacters))
+
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
+const noneCharacters = people.filter(person => person.gender === 'none')
 const otherCharacters = people.filter(person => {
     if (person.gender === 'n/a' || 
         person.gender === 'hermaphrodite') {
         return person 
-    } //TODO: make sure to also include gender: 'none'
+    }
 })
 
 function populateDOM(characters) {
