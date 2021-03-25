@@ -8,7 +8,7 @@ const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipView')
 
 const dialog = document.querySelector('.modal')
-const closeButton = document.querySelector('modal-close')
+const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
 
 closeButton.addEventListener('click', () =>  {
@@ -66,7 +66,7 @@ function getRandomPosition() {
     let x = document.body.scrollWidth
     let randomY = Math.floor(Math.random() * y)
     let randomX = Math.floor(Math.random() * x)
-    return (randomX, randomY)
+    return [randomX, randomY]
 }
 
 populateNav(starships)
