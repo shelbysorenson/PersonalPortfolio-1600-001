@@ -7,6 +7,18 @@ const nav = document.querySelector('nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipView')
 
+const dialog = document.querySelector('.modal')
+const closeButton = document.querySelector('modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+closeButton.addEventListener('click', () =>  {
+    dialog.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
+
 function populateNav(starships) {
     starships.forEach((starship) => {
         let anchorWrap = document.createElement('a')
@@ -28,6 +40,7 @@ function populateShipView(shipData) {
     shipImage.addEventListener('error', (err) => {
         console.log(`Oops! Image doesn't exist.`)
         shipImage.hidden = true 
+        dialog.classList.toggle("is-active")
     })
     shipView.appendChild(shipImage)
 }
@@ -41,6 +54,7 @@ function addStarField(element, numStars) {
         star.style.setProperty('height', '2px')
         star.style.setProperty('background-color', 'white')
         let xy = getRandomPosition()
+        /* console.log(xy) */
         star.style.left = `${xy[0]}px`
         star.style.top = `${ xy[1]}px`
         element.appendChild(star)
