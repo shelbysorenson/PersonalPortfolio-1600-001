@@ -86,3 +86,53 @@ function sumTwoThings(one, two) {
 const theFunction = () => { //multiple lines use curly braces and 'return' keyword
 return 'I am awesome'
 }
+
+// Filter method example. Filter returns an array of all elements that 'pass the test'
+const pilots = [
+    {
+        id: 2,
+        name: "Wedge Antilles",
+        faction: "Rebels"
+    },
+    {
+        id: 8,
+        name: "Ciena Ree",
+        faction: "Empire"
+    },
+    {
+        id: 40,
+        name: "Iden Versio",
+        faction: "Empire"
+    },
+    {
+        id: 66,
+        name: "Thane Kyrell",
+        faction: "Rebels"
+    }
+];
+
+const rebels = pilots.filter(pilot => pilot.faction === "Rebels");
+const empire = pilots.filter((pilot) => {
+    return pilot.faction === "Empire"
+})
+
+// Array helper method 'map'
+
+let filmURLs = [
+    "https://swapi.co/api/films/",
+    "https://swapi.co/api/films/5/",
+    "https://swapi.co/api/films/4/this one is longer... even longer",
+    "https://swapi.co/api/films/6/",
+    "https: ",
+    "https://swapi.co/api/films/1/"
+];
+
+const filmLengths = filmURLs.map((filmURL) => filmURL.length);
+
+const filmPlusMore = filmURLs.map((filmURL) => {
+    let filmObj = {
+        index: filmURL,
+        foo: 'Bar'
+    }
+    return filmObj
+})
