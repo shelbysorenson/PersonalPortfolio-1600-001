@@ -13484,7 +13484,7 @@ export const representatives = [
     api_uri: 'https://api.propublica.org/congress/v1/members/O000171.json',
     first_name: 'Tom',
     middle_name: null,
-    last_name: 'O"Halleran',
+    last_name: "O'Halleran",
     suffix: null,
     date_of_birth: '1946-01-24',
     gender: 'M',
