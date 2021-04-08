@@ -39,7 +39,7 @@ const otherCharacters = people.filter(person => {
 
 function populateDOM(characters) {
     removeChildren(mainElement)
-characters.forEach((person) => {
+    characters.forEach((person) => {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
     let charNum = getLastNumber(person.url)

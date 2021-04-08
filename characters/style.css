@@ -1,13 +1,31 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
 #main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+button {
+    align-content: center;
+    font-size: 1em;
+    color: white;
+}
+
+button:hover {
+    color: yellow;
 }
 
 figure > img {
     height: 200px;
+    margin: 14px 14px 0px 14px;
+}
+
+figcaption {
+    text-align: center;
+    color: white; 
 }
