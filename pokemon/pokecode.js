@@ -1,8 +1,17 @@
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
+const fetchButton = document.querySelector('#fetchSelectedPokemon')
 
 loadButton.addEventListener('click', () => {
     loadPage()
+})
+
+fetchButton.addEventListener('click', () => {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/25`).then(
+        (data) => {
+            populatePokeCard(data)
+        }
+    )
 })
 
 async function getAPIData(url) {
