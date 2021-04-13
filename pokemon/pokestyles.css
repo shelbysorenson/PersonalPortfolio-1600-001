@@ -57,11 +57,3 @@
     background: blue;
     transform: rotateY(180deg);
 }
-
-.button.is-primary {
-    color: red;
-}
-
-#submitButton {
-    color: red;
-}

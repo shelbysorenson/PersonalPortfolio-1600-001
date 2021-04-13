@@ -2,16 +2,35 @@ const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
 
+const dialog = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+const submitButton = document.querySelector('#submitButton')
+
+closeButton.addEventListener('click', () =>  {
+    dialog.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
+
 loadButton.addEventListener('click', () => {
     loadPage()
 })
 
 fetchButton.addEventListener('click', () => {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon/25`).then(
+    dialog.classList.toggle("is-active")
+    /* getAPIData(`https://pokeapi.co/api/v2/pokemon/25`).then(
         (data) => {
             populatePokeCard(data)
         }
-    )
+    ) */
+})
+
+submitButton.addEventListener('click', () => {
+    let inputField = document.querySelector('.input')
+    let inputValue = inputField.value
 })
 
 async function getAPIData(url) {
@@ -26,7 +45,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=748`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then(
@@ -60,7 +79,7 @@ function populateCardFront(pokemon) {
     let frontLabel = document.createElement('p')
     frontLabel.textContent = pokemon.name
     let frontImage = document.createElement('img')
-    frontImage.src = `images/${getImageFileName(pokemon)}.png`
+    frontImage.src = getImageFileName(pokemon)
 
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
@@ -77,9 +96,9 @@ function populateCardBack(pokemon) {
 }
 
 function getImageFileName(pokemon) {
-    if (pokemon.id < 10) {
-        return `00${pokemon.id}`
-    } else if (pokemon.id > 9 && pokemon.id < 100) {
-        return `0${pokemon.id}` 
-    }
+    let pokeId
+    if (pokemon.id < 10) pokeId = `00${pokemon.id}`
+    if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}` 
+    if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
+    return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
 }
