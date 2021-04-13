@@ -23,12 +23,16 @@ img, nav {
     z-index: 1;
 }
 
-h1 {
-    text-align: center;
-    font-size: 50pt;
-    font-weight: 700;
-    font-family: 'Star Jedi', arial;
-    color: yellow;
+@supports (-webkit-text-stroke: 1px yellow) {
+    h1 {
+        text-align: center;
+        font-size: 50pt;
+        font-weight: 700;
+        font-family: 'Star Jedi', arial;
+        -webkit-text-stroke: 1px yellow;
+        -webkit-text-fill-color: black;
+        color: yellow;
+    }
 }
 
 a {

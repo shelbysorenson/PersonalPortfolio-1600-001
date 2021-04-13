@@ -5,7 +5,7 @@
 }
 
 
-@supports (-webkit-text-stroke: 1px blue) {
+@supports (-webkit-text-stroke: 1px rgb(57, 79, 174)) {
     h1 {
         font-family: Pokemon Solid;
       -webkit-text-stroke: 1px rgb(57, 79, 174);
