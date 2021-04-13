@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+
+@supports (-webkit-text-stroke: 1px blue) {
+    h1 {
+        font-family: Pokemon Solid;
+      -webkit-text-stroke: 1px rgb(57, 79, 174);
+      -webkit-text-fill-color: rgb(254, 208, 0);
+    }
+  }
+
 .pokeGrid {
     display: flex;
     flex-wrap: wrap;
