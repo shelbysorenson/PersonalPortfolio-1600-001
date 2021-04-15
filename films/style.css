@@ -9,14 +9,20 @@ body {
 #filmList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 figure {
-    margin: 1em;
+    margin: 1rem;
 }
 
-figcaption {
-    text-align: center;
-    background-color: black;
-    color: #fff;
+@supports (-webkit-text-stroke: 1px yellow) {
+    figcaption {
+        text-align: center;
+        font-size: 16pt;
+        font-family: 'Star Jedi', arial;
+        -webkit-text-stroke: 1px yellow;
+        -webkit-text-fill-color: black;
+        color: yellow;
+    }
 }

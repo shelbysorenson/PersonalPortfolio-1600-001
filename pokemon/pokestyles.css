@@ -50,10 +50,16 @@
 }
 
 .card__face--front {
-    background: red;
+    background: rgb(76, 117, 130);
+    border-radius: 15px;
+    color: white;
+    border: solid 3px black;
 }
 
 .card__face--back {
-    background: blue;
+    background: rgb(189, 164, 105);
     transform: rotateY(180deg);
+    border-radius: 15px;
+    color: white;
+    border: solid 3px black;
 }

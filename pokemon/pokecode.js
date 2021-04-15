@@ -30,7 +30,7 @@ fetchButton.addEventListener('click', () => {
 
 submitButton.addEventListener('click', () => {
     let inputField = document.querySelector('.input')
-    let inputValue = inputField.value
+    inputValue = inputField.value
 })
 
 async function getAPIData(url) {
@@ -51,7 +51,6 @@ function loadPage() {
                 await getAPIData(singlePokemon.url).then(
                     (pokeData) => populatePokeCard(pokeData)
                 )
-                
             }
         }
     )

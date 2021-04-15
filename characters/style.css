@@ -27,5 +27,7 @@ figure > img {
 
 figcaption {
     text-align: center;
-    color: white; 
+    color: yellow;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 11pt;
 }
