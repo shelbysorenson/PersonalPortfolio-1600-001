@@ -56,6 +56,11 @@
     border: solid 3px black;
 }
 
+.card__face--front img {
+    height: 190px;
+    width: 190px;
+}
+
 .card__face--back {
     background: rgb(189, 164, 105);
     transform: rotateY(180deg);
