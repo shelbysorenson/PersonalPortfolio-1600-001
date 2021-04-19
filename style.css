@@ -1,9 +1,9 @@
 :root {
-    --dark-brown: #332213;
-    --light-orange: #F29C50;
-    --beige: #F2E8DC;
-    --light-brown: #B28D61;
-    --brown: #73462C;
+    --navy-blue: #010326;
+    --light-blue: #8BBBD9;
+    --white-blue: #F2F6F9;
+    --baby-blue: #C4E1F2;
+    --blue: #4B93BF;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
     justify-content: flex-end;
     position: fixed;
     z-index: 9999;
-    background-color: var(--dark-brown);
+    background-color: var(--navy-blue);
 }
 
 .navlist {
@@ -39,8 +39,8 @@ body {
 }
 
 .navlist a:hover {
-    background-color: var(--light-orange);
-    color: #333;
+    background-color: var(--baby-blue);
+    color: #010B40;
 }
 
 #welcome-section {
@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--brown);
+    background-color: var(--blue);
     color: #fff;
     width: 100%;
     height: 100vh;
@@ -59,7 +59,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--beige);
+    background-color: var(--white-blue);
     height: 600px;
 }
 
@@ -68,16 +68,16 @@ body {
 }
 
 .project-tile:hover {
-    color:#F29C50;
+    color:#8BBBD9;
 }
 
 figcaption {
    position: relative;
    top: -7px;
    text-align: center;
-   background-color: var(--dark-brown);
+   background-color: var(--navy-blue);
    font-weight: 900;
-   color: var(--beige);
+   color: var(--baby-blue);
 }
 
 figcaption > span {
@@ -89,7 +89,7 @@ figcaption > span {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: var(--light-brown);
+   background-color: var(--light-blue);
    height: 300px;
 }
 
@@ -100,16 +100,16 @@ figcaption > span {
 
 .contact-links a {
     margin: 1em;
-    color: var(--beige);
+    color: var(--white-blue);
 }
 
 footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--dark-brown);
+    background-color: var(--navy-blue);
     height: 70px;
-    color: var(--beige);
+    color: var(--white-blue);
 }
 
 a {
