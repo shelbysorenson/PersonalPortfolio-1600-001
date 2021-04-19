@@ -67,17 +67,17 @@ body {
     margin: 1em;
 }
 
-.project-tile:hover {
-    color:#8BBBD9;
-}
-
 figcaption {
    position: relative;
    top: -7px;
    text-align: center;
    background-color: var(--navy-blue);
    font-weight: 900;
-   color: var(--baby-blue);
+   color: #C4E1F2;
+}
+
+figcaption:hover {
+    color: #4B93BF;
 }
 
 figcaption > span {
@@ -91,6 +91,7 @@ figcaption > span {
    align-items: center;
    background-color: var(--light-blue);
    height: 300px;
+   color: #fff;
 }
 
 .contact-links {
