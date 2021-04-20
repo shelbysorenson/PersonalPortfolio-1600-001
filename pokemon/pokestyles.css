@@ -50,7 +50,6 @@
 }
 
 .card__face--front {
-    background: rgb(76, 117, 130);
     border-radius: 15px;
     color: white;
     border: solid 3px black;
@@ -67,4 +66,24 @@
     border-radius: 15px;
     color: white;
     border: solid 3px black;
+}
+
+.grass {
+    background-color: rgb(76, 117, 130);
+}
+
+.fire {
+    box-shadow: 10px 5px 5px red;
+}
+
+.bug {
+    box-shadow: 10px 5px 5px green;
+}
+
+.normal {
+    background-color: beige;
+}
+
+.flying {
+    background-color: aqua;
 }

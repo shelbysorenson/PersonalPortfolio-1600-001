@@ -50,7 +50,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=748`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then(
@@ -85,6 +85,9 @@ function populateCardFront(pokemon) {
     let frontImage = document.createElement('img')
     frontImage.src = getImageFileName(pokemon)
 
+    let pokeType = pokemon.types[0].type.name
+    pokeFront.classList.add((pokeType))
+
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
     return pokeFront
@@ -96,6 +99,12 @@ function populateCardBack(pokemon) {
     let backLabel = document.createElement('p')
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
     pokeBack.appendChild(backLabel)
+
+    pokemon.types.forEach((pokeType) => {
+        let backType = document.createElement('p') 
+        backType.textContent = pokeType.type.name  
+        pokeBack.appendChild(backType)
+    })
     return pokeBack
 }
 
