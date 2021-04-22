@@ -17,7 +17,9 @@ button {
 }
 
 button:hover {
-    color: yellow;
+   color: black;
+   background-color: yellow;
+   box-shadow: 0 0 10px yellow, 0 0 40px yellow, 0 0 80px yellow;
 }
 
 figure > img {
