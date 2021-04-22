@@ -19,24 +19,45 @@ loadButton.addEventListener('click', () => loadPage())
 
 newButton.addEventListener('click', () => {
    let pokeName = prompt('What is the name of your new Pokemon?')
-   let pokeHeight = prompt('What is the height of your new Pokemon?')
-   let pokeWeight = prompt('Pokemon weight?')
+  // let pokeHeight = prompt('What is the height of your new Pokemon?')
+ //  let pokeWeight = prompt('Pokemon weight?')
+   let pokeAbilities = prompt('What are your Pokemon abilities? (use a comma separated list)')
+   let pokeMove = prompt("What is your Pokemon's best move")
+   let abilitiesArray = getAbilitiesArray(pokeAbilities)
    let newPokemon = new Pokemon(
     pokeName,
-    pokeHeight,
-    pokeWeight,
-    ['eat', 'sleep'],
-    ['study', 'game'],
+    80,
+    3000,
+    abilitiesArray,
     [
-      {
+        {
+            move: {
+                name: pokeMove
+            }
+        }
+    ],
+    [
+        {
         type: {
-          name: "normal",
+          name: 'normal',
         },
       },
     ],
 )
-populatePokeCard(newPokemon)
+    populatePokeCard(newPokemon)
 })
+
+function getAbilitiesArray(commaString) {
+    let tempArray = commaString.split(',')
+    return tempArray.map((abilityName) => {
+        return {
+            ability: {
+                name: abilityName
+            }
+        }
+    })
+}
+
 
 fetchButton.addEventListener('click', () => {
     let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase()
@@ -58,7 +79,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=150`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=15`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then((pokeData) => 
@@ -118,10 +139,23 @@ function populateCardBack(pokemon) {
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
     pokeBack.appendChild(backLabel)
 
+    let typeLabel = document.createElement('h3')
+    typeLabel.textContent = "Types:"
+    pokeBack.appendChild(typeLabel)
+
     pokemon.types.forEach((pokeType) => {
         let backType = document.createElement('p') 
         backType.textContent = pokeType.type.name  
         pokeBack.appendChild(backType)
+    })
+    let abilityLabel = document.createElement('h3')
+    abilityLabel.textContent = "Abilities:"
+    pokeBack.appendChild(abilityLabel)
+    pokemon.abilities.forEach((pokeAbility) => {
+        let ability = document.createElement('p')
+        ability.textContent = pokeAbility.ability.name
+        pokeBack.appendChild(ability)
+
     })
     return pokeBack
 }
