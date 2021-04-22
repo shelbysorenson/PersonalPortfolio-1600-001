@@ -3,6 +3,21 @@
     box-sizing: border-box;
 }
 
+button {
+    width: 27vh;
+    margin: 1em;
+    padding: .5em;
+    background: red;
+    color: white;
+    font-weight: 700;
+    border: 3px solid rgb(50, 70, 164);
+    border-radius: 10px;
+}
+
+button:hover {
+    background: lightsteelblue;
+}
+
 .congressGrid {
     display: flex;
     flex-wrap: wrap;
