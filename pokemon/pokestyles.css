@@ -19,6 +19,21 @@
     justify-content: space-between;
 }
 
+button {
+    width: 25vh;
+    margin: 1em;
+    padding: .5em;
+    background: rgb(254, 201, 2);
+    color: rgb(50, 70, 164);
+    font-weight: 700;
+    border: 3px solid rgb(50, 70, 164);
+    border-radius: 10px;
+}
+
+button:hover {
+    background: lightsteelblue;
+}
+
 .scene {
     width: 200px;
     height: 260px;
