@@ -57,10 +57,10 @@ body {
 #projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: var(--white-blue);
-    height: 600px;
+    height: 62.5%;
 }
 
 .project-tile {
