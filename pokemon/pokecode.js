@@ -60,7 +60,7 @@ function getAbilitiesArray(commaString) {
 
 
 fetchButton.addEventListener('click', () => {
-    let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase()
+    let pokeNameOrId = prompt('Enter Pokemon ID or Name:').toLowerCase()
     console.log(pokeNameOrId)
     getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then((data) => 
         populatePokeCard(data),
@@ -79,7 +79,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=15`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then((pokeData) => 
@@ -114,27 +114,34 @@ function populateCardFront(pokemon) {
     let frontImage = document.createElement('img')
     frontImage.src = getImageFileName(pokemon)
 
-    let pokeType1 = pokemon.types[0].type.name
-    if (pokemon.types.length > 1) {
-        let pokeType2 = pokemon.types[1].type.name
-        pokeFront.style.setProperty(
-            'background',
-            `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(
-                pokeType2,
-            )})`,
-        )
-    } else {
-        pokeFront.style.setProperty('background', getPokeTypeColor(pokeType1))
-     }
+    frontImage.addEventListener('error', (err) => frontImage.src = 'images/pokeball.png')
+
+    typesBackground(pokemon, pokeFront)
 
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
     return pokeFront
 }
 
+function typesBackground(pokemon, card) {
+    let pokeType1 = pokemon.types[0].type.name
+    if (pokemon.types.length > 1) {
+        let pokeType2 = pokemon.types[1].type.name
+        card.style.setProperty(
+            'background',
+            `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(
+                pokeType2,
+            )})`,
+        )
+    } else {
+        card.style.setProperty('background', getPokeTypeColor(pokeType1))
+     }
+}
+
 function populateCardBack(pokemon) {
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
+    typesBackground(pokemon, pokeBack)
     let backLabel = document.createElement('p')
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
     pokeBack.appendChild(backLabel)
@@ -155,8 +162,14 @@ function populateCardBack(pokemon) {
         let ability = document.createElement('p')
         ability.textContent = pokeAbility.ability.name
         pokeBack.appendChild(ability)
-
     })
+
+    pokemon.stats.forEach((stat) => {
+        let statPara = document.createElement('p')
+        statPara.textContent = `${stat.stat.name} : ${stat.base_stat}`
+        pokeBack.appendChild(statPara)
+    })
+
     return pokeBack
 }
 
