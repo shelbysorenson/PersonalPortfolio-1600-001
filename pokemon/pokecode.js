@@ -31,17 +31,17 @@ newButton.addEventListener('click', () => {
     abilitiesArray,
     [
         {
-            move: {
-                name: pokeMove
-            }
-        }
+        move: {
+          name: pokeMove
+        },
+      },
     ],
     [
         {
-        type: {
-          name: 'normal',
+            type: {
+                name: 'normal',
+            },
         },
-      },
     ],
 )
     populatePokeCard(newPokemon)
@@ -52,12 +52,11 @@ function getAbilitiesArray(commaString) {
     return tempArray.map((abilityName) => {
         return {
             ability: {
-                name: abilityName
-            }
+                name: abilityName,
+            },
         }
     })
 }
-
 
 fetchButton.addEventListener('click', () => {
     let pokeNameOrId = prompt('Enter Pokemon ID or Name:').toLowerCase()
