@@ -26,6 +26,7 @@ partyHackButton.addEventListener('click', () => {
 })
 
 function populateCongressGrid(simplePeople) {
+    //console.log(simplePeople)
     removeChildren(congressGrid)
     simplePeople.forEach(person => {
         let personDiv = document.createElement('div')
@@ -33,18 +34,30 @@ function populateCongressGrid(simplePeople) {
         let personFig = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
-
         figImg.src = person.imgURL
         figCaption.textContent = `${person.name}`
+
+        let iconImage = document.createElement('img')
+        iconImage.className = 'image'
+        iconImage.src = partyIcon(person)
 
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
         personDiv.appendChild(personFig)
+        personDiv.appendChild(iconImage)
         congressGrid.appendChild(personDiv)
     })
 }
 
+function partyIcon(data) {
+    console.log(data.party)
+    let partyLetter = data.party
+    let imageurl = `../images/${partyLetter}.png`
+    return imageurl
+}
+
  function getSimplifiedCongress(congressPeople) {
+     /*console.log(congressPeople)*/
      return congressPeople.map(person => {
         let middleName = person.middle_name ? `${person.middle_name}` : ``
         return {
@@ -55,7 +68,8 @@ function populateCongressGrid(simplePeople) {
             seniority: parseInt(person.seniority, 10),
             date_of_birth: parseInt(person.date_of_birth, 10),
             missed_votes_pct: person.missed_votes_pct,
-            votes_with_party_pct: person.votes_with_party_pct
+            votes_with_party_pct: person.votes_with_party_pct,
+            party: person.party
         }
      })
  }
