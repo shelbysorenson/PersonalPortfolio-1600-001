@@ -52,9 +52,7 @@ newButton.addEventListener('click', () => {
                 name: "hp"
             }
 
-        }
-            
-        
+        } 
     ]
 )
     populatePokeCard(newPokemon)

@@ -4,6 +4,23 @@
     background-color: black;
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+@supports (-webkit-text-stroke: 1px yellow) {
+    h1 {
+        text-align: center;
+        font-size: 40pt;
+        font-family: 'Star Jedi', arial;
+        -webkit-text-stroke: 1px yellow;
+        -webkit-text-fill-color: black;
+        color: yellow;
+    }
+}
+
+
 #main {
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +33,9 @@ button {
     letter-spacing: 2px;
     color: white;
     padding: 1%;
-    border: 3px solid goldenrod;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 3px solid yellow;
     border-radius: 100px;
 }
 
@@ -28,6 +47,7 @@ button:hover {
 
 figure > img {
     height: 200px;
+    border: 1px solid goldenrod;
     margin: 14px 14px 0px 14px;
 }
 
