@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0px 20px;
+    background: linear-gradient(.25turn, rgb(254, 208, 0), rgb(57, 79, 174));
+}
+
 
 @supports (-webkit-text-stroke: 1px rgb(57, 79, 174)) {
     h1 {
@@ -14,7 +19,8 @@
   }
 
   header {
-    background: #C4E1F2;
+    margin: 10px;
+    text-align: center;
     padding: 10px;
   }
 
@@ -22,7 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: #F2ECCE;
+
 }
 
 button {
@@ -50,6 +56,7 @@ button:hover {
     height: 260px;
     margin: 10px;
     perspective: 600px;
+    
 }
 
 .card {
