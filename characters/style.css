@@ -47,7 +47,7 @@ button:hover {
 
 figure > img {
     height: 200px;
-    border: 1px solid goldenrod;
+    border: 4mm ridge rgba(242, 232, 182, .6);
     margin: 14px 14px 0px 14px;
 }
 
