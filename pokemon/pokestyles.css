@@ -6,21 +6,19 @@
 }
 
 body {
-    margin: 0px 20px;
     background: linear-gradient(.25turn, rgb(254, 208, 0), rgb(57, 79, 174));
 }
-
 
 @supports (-webkit-text-stroke: 1px rgb(57, 79, 174)) {
     h1 {
         font-family: Pokemon Solid;
+        font-size: 50pt;
       -webkit-text-stroke: 1px rgb(57, 79, 174);
       -webkit-text-fill-color: rgb(254, 208, 0);
     }
   }
 
   header {
-    margin: 10px;
     text-align: center;
     padding: 10px;
   }
@@ -44,6 +42,7 @@ button {
     outline: none;
     font-family: 'Sigmar One', cursive;
     font-size: 9pt;
+    margin: 25px;
 }
 
 button:hover {
@@ -55,7 +54,7 @@ button:hover {
 .scene {
     width: 200px;
     height: 260px;
-    margin: 10px;
+    margin: 25px;
     perspective: 600px;
     
 }
