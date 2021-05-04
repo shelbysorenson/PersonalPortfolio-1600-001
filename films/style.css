@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    cursor: url('/images/yoda.png'), auto;
 }
 
 @supports (-webkit-text-stroke: 1px yellow) {
