@@ -40,6 +40,7 @@ function populateCongressGrid(simplePeople) {
         iconImage.className = 'image'
         iconImage.src = partyIcon(person)
 
+
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
         personDiv.appendChild(personFig)

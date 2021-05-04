@@ -51,7 +51,7 @@ button:hover {
 .figureDiv {
     padding: 10px;
     margin: 15px;
-    border: 1px red solid;
+    border: 4mm ridge #B6D6F2;
     box-shadow: 3px 3px 3px black;
 }
 
