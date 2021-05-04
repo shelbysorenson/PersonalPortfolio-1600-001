@@ -2,8 +2,19 @@
     margin: 0;
 }
 
+@supports (-webkit-text-stroke: 1px yellow) {
+    h1 {
+        text-align: center;
+        font-size: 40pt;
+        font-family: 'Star Jedi', arial;
+        -webkit-text-stroke: 1px yellow;
+        -webkit-text-fill-color: black;
+        color: yellow;
+    }
+}
+
 body {
-    background-color: #000;
+    background-color: black;
 }
 
 #filmList {
@@ -14,6 +25,7 @@ body {
 
 figure {
     margin: 1rem;
+    border: 10px groove yellow; 
 }
 
 @supports (-webkit-text-stroke: 1px yellow) {
@@ -24,5 +36,7 @@ figure {
         -webkit-text-stroke: 1px yellow;
         -webkit-text-fill-color: black;
         color: yellow;
+        padding: 10px;
     }
 }
+
