@@ -48,8 +48,8 @@ button:hover {
 
 figure > img {
     height: 200px;
-    border: 4mm ridge rgba(242, 232, 182, .6);
-    margin: 14px 14px 0px 14px;
+    border: 4mm ridge rgba(255, 220, 0, .6);
+    margin: 30px 30px 0px 30px;
 }
 
 figcaption {
@@ -57,4 +57,5 @@ figcaption {
     color: yellow;
     font-family: 'Orbitron', sans-serif; 
     font-size: 11pt;
+    padding: 5px;
 }
