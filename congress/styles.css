@@ -6,7 +6,8 @@
 header {
     text-align: center;
     font-family: 'Public Sans', sans-serif;
-    padding: 10px;
+    font-size: 20pt;
+    padding: 25px;
     background: #B6D6F2;
 }
 
@@ -32,7 +33,6 @@ button {
     outline: none;
     font-family: 'Public Sans', sans-serif;
     font-weight: 9pt;
-
 }
 
 button:hover {
@@ -61,6 +61,8 @@ figure {
 
 figcaption {
     text-align: center;
+    padding: 5px;
+    font-size: 15pt;
 }
 
 div#wrapper {

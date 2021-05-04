@@ -36,25 +36,25 @@ function populateCongressGrid(simplePeople) {
         figImg.src = person.imgURL
         figCaption.textContent = `${person.name}`
 
-        let iconImage = document.createElement('img')
+        /*let iconImage = document.createElement('img')
         iconImage.className = 'image'
-        iconImage.src = partyIcon(person)
+        iconImage.src = partyIcon(person)*/
 
 
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
         personDiv.appendChild(personFig)
-        personDiv.appendChild(iconImage)
+        /*personDiv.appendChild(iconImage)*/
         congressGrid.appendChild(personDiv)
     })
 }
 
-function partyIcon(data) {
+/*function partyIcon(data) {
     console.log(data.party)
     let partyLetter = data.party
     let imageurl = `../images/${partyLetter}.png`
     return imageurl
-}
+}*/
 
  function getSimplifiedCongress(congressPeople) {
      /*console.log(congressPeople)*/
